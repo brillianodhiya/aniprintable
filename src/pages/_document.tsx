@@ -1,4 +1,4 @@
-import PrelineScript from "@/components/PrelineScript";
+// import PrelineScript from "@/components/PrelineScript";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -7,7 +7,6 @@ export default function Document() {
       <Head />
       <body>
         <Main />
-        <PrelineScript />
         <NextScript />
       </body>
     </Html>
