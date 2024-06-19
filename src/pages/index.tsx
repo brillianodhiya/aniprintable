@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +35,37 @@ const FaqList = ({ list = [] }: { list: string[] }) => {
 export default function Home() {
   return (
     <div>
+      <Head>
+        <title>
+          Jenius Printable Bundling 2024 | 10.000+ Halaman Worksheet Anak
+        </title>
+        <meta
+          name="description"
+          content="Jenius Printable Bundling 2024 | 10.000+ Halaman Worksheet Anak Usia 2-5 Tahun! 🎉"
+          key="desc"
+        />
+        <meta
+          property="og:title"
+          content="Jenius Printable Bundling 2024 | 10.000+ Halaman Worksheet Anak"
+          key="og:title"
+        />
+        <meta
+          property="og:description"
+          content="Jenius Printable Bundling 2024 | 10.000+ Halaman Worksheet Anak Usia 2-5 Tahun! 🎉"
+          key="og:desc"
+        />
+        <meta
+          property="og:image"
+          content="/content-banner.jpeg"
+          key="og:image"
+        />
+        <meta
+          property="og:url"
+          content="https://jeniusprintable.com"
+          key="og:url"
+        />
+        <link rel="icon" href="/icon.jpeg" sizes="any" />
+      </Head>
       {/* announcement */}
       {/* <a
         className="group block bg-gray-100 hover:bg-gray-200 p-4 rounded-lg text-center transition-all duration-300"
