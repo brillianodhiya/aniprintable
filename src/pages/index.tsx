@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Head from "next/head";
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,6 +35,16 @@ const FaqList = ({ list = [] }: { list: string[] }) => {
 };
 
 export default function Home() {
+  // State variable for managing zoomed image
+  const [zoomedImage, setZoomedImage] = useState(null);
+  // Function to open zoomed image
+  const openZoomedImage = (imageUrl: any) => {
+    setZoomedImage(imageUrl);
+  };
+  // Function to close zoomed image
+  const closeZoomedImage = () => {
+    setZoomedImage(null);
+  };
   return (
     <div>
       <Head>
@@ -76,7 +88,7 @@ export default function Home() {
       {/* announcement */}
       {/* <a
         className="group block bg-gray-100 hover:bg-gray-200 p-4 rounded-lg text-center transition-all duration-300"
-        href="https://wa.me/6285262625889?text=Assalamu'alaikum Bunda Ani, saya mau Jenius Printable Bundling 2024 harga Rp.98.000😊✨"
+        href="https://wa.me/6285262625889?text=Assalamu'alaikum Bunda Ani, saya mau Jenius Printable Bundling 2024 harga Rp.98.000"
         target="_blank"
         rel="noopener"
       >
@@ -84,7 +96,7 @@ export default function Home() {
           <p className="me-2 inline-block text-sm text-gray-800">
             DAPATKAN BUNDLING SEKARANG!
           </p>
-          <span className="group-hover:underline decoration-2 inline-flex justify-center items-center gap-x-2 font-semibold text-blue-600 text-sm">
+          <span className="group-hover:underline decoration-2 inline-flex justify-center items-center gap-x-2 font-semibold text-yellow-500 text-sm">
             Hubungi
             <svg
               className="flex-shrink-0 size-4"
@@ -110,19 +122,19 @@ export default function Home() {
           <div>
             <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight">
               JENIUS PRINTABLE BUNDLING{" "}
-              <span className="text-blue-600">
+              <span className="text-yellow-500">
                 {new Date().getFullYear().toString()}
               </span>
             </h1>
             <p className="mt-3 text-lg text-gray-800">
-              10.000+ Halaman Printable Worksheet Edukatif Anak Usia 2-5 Tahun!
-              🎉
+              <span className="font-bold text-red-500 text-2xl">10.000+</span>{" "}
+              Halaman Printable Worksheet Edukatif Anak Usia 2-5 Tahun! 🎉
             </p>
 
             <div className="mt-7 grid gap-3 w-full sm:inline-flex">
               <a
                 className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-green-600 text-white hover:bg-green-700 disabled:opacity-50 disabled:pointer-events-none"
-                href="https://wa.me/6285262625889?text=Assalamu'alaikum Bunda Ani, saya mau Jenius Printable Bundling 2024 harga Rp.98.000😊✨"
+                href="https://wa.me/6285262625889?text=Assalamu'alaikum Bunda Ani, saya mau Jenius Printable Bundling 2024 harga Rp.98.000"
                 target="_blank"
                 rel="noopener"
               >
@@ -230,7 +242,7 @@ export default function Home() {
               src="/banner.jpeg"
               alt="JENIUS PRINTABLE BUNDLING 2024"
             />
-            <div className="absolute inset-0 -z-[1] bg-gradient-to-tr from-gray-200 via-white/0 to-white/0 size-full rounded-md mt-4 -mb-4 me-4 -ms-4 lg:mt-6 lg:-mb-6 lg:me-6 lg:-ms-6"></div>
+            <div className="absolute inset-0 -z-[1] bg-gradient-to-tr from-red-500 via-white/0 to-white/0 size-full rounded-md mt-4 -mb-4 me-4 -ms-4 lg:mt-6 lg:-mb-6 lg:me-6 lg:-ms-6"></div>
 
             <div className="absolute bottom-0 start-0">
               <svg
@@ -357,7 +369,9 @@ export default function Home() {
       {/* features */}
       <div className="flex flex-col max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         <div className="aspect-w-16 aspect-h-7 order-2 lg:order-1 mt-8 lg:mt-0">
-          <img
+          <Image
+            width={1000}
+            height={1000}
             className="w-full object-cover rounded-xl h-80"
             src="/lucas-alexander-sJuDgtkUyYs-unsplash.jpg"
             alt="Unsplash Image by lucas alexander"
@@ -381,7 +395,7 @@ export default function Home() {
             <div className="grid sm:grid-cols-2 gap-8 md:gap-12">
               <div className="flex gap-x-5">
                 <svg
-                  className="flex-shrink-0 mt-1 size-6 text-blue-600"
+                  className="flex-shrink-0 mt-1 size-6 text-yellow-500"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -408,7 +422,7 @@ export default function Home() {
               </div>
               <div className="flex gap-x-5">
                 <svg
-                  className="flex-shrink-0 mt-1 size-6 text-blue-600"
+                  className="flex-shrink-0 mt-1 size-6 text-yellow-500"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -439,7 +453,7 @@ export default function Home() {
 
               <div className="flex gap-x-5">
                 <svg
-                  className="flex-shrink-0 mt-1 size-6 text-blue-600"
+                  className="flex-shrink-0 mt-1 size-6 text-yellow-500"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -465,7 +479,7 @@ export default function Home() {
 
               <div className="flex gap-x-5">
                 <svg
-                  className="flex-shrink-0 mt-1 size-6 text-blue-600"
+                  className="flex-shrink-0 mt-1 size-6 text-yellow-500"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -509,7 +523,7 @@ export default function Home() {
               </p>
               <h1 className="text-2xl text-gray-800 font-bold sm:text-5xl lg:text-6xl lg:leading-tight">
                 Anda tidak hanya mendapatkan 500-600 halaman. Tapi ada
-                <span className="text-blue-500">
+                <span className="text-red-500">
                    10.000 halaman lebih worksheet anak{" "}
                 </span>
                 yang bisa dijual kembali!
@@ -519,7 +533,7 @@ export default function Home() {
             <div className="mx-auto">
               <a
                 className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-green-600 text-white hover:bg-green-700 disabled:opacity-50 disabled:pointer-events-none"
-                href="https://wa.me/6285262625889?text=Assalamu'alaikum Bunda Ani, saya mau Jenius Printable Bundling 2024 harga Rp.98.000😊✨"
+                href="https://wa.me/6285262625889?text=Assalamu'alaikum Bunda Ani, saya mau Jenius Printable Bundling 2024 harga Rp.98.000"
                 target="_blank"
                 rel="noopener"
               >
@@ -831,7 +845,7 @@ export default function Home() {
       </h4>
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-10 mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl">
+          <div className="flex flex-col bg-green-500 border border-gray-200 shadow-sm rounded-xl">
             <div className="flex-auto p-4 md:p-6">
               <p className="mt-3 sm:mt-6 text-base text-gray-800 md:text-xl">
                 <em>
@@ -846,11 +860,11 @@ Oiya saya print yang butuh² dulu dan jadiin 2 dalam selembar biar irit wkwkwk "
               <h3 className="text-sm font-semibold text-gray-800 sm:text-base">
                 Bunda Oktavia
               </h3>
-              <p className="text-sm text-gray-500">Ibu Rumah Tangga</p>
+              <p className="text-sm text-white">Ibu Rumah Tangga</p>
             </div>
           </div>
 
-          <div className="flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl">
+          <div className="flex flex-col bg-green-500 border border-gray-200 shadow-sm rounded-xl">
             <div className="flex-auto p-4 md:p-6">
               <p className="mt-3 sm:mt-6 text-base text-gray-800 md:text-xl">
                 <em>
@@ -863,11 +877,11 @@ Oiya saya print yang butuh² dulu dan jadiin 2 dalam selembar biar irit wkwkwk "
               <h3 className="text-sm font-semibold text-gray-800 sm:text-base">
                 Bunda Juita Anissa{" "}
               </h3>
-              <p className="text-sm text-gray-500">Owner Bisnis Playground</p>
+              <p className="text-sm text-white">Owner Bisnis Playground</p>
             </div>
           </div>
 
-          <div className="flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl">
+          <div className="flex flex-col bg-green-500 border border-gray-200 shadow-sm rounded-xl">
             <div className="flex-auto p-4 md:p-6">
               <p className="mt-3 sm:mt-6 text-base text-gray-800 md:text-xl">
                 <em>
@@ -880,7 +894,7 @@ Oiya saya print yang butuh² dulu dan jadiin 2 dalam selembar biar irit wkwkwk "
               <h3 className="text-sm font-semibold text-gray-800 sm:text-base">
                 Bunda Naomi Nova
               </h3>
-              <p className="text-sm text-gray-500">Influencer dan blogger</p>
+              <p className="text-sm text-white">Influencer dan blogger</p>
             </div>
           </div>
         </div>
@@ -930,33 +944,450 @@ Oiya saya print yang butuh² dulu dan jadiin 2 dalam selembar biar irit wkwkwk "
       </div>
 
       {/* hero 3 */}
+      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto flex justify-center">
+        <div className="space-y-6 sm:space-y-8">
+          <div className="space-y-2 md:space-y-4">
+            <h2 className="font-bold text-3xl lg:text-3xl text-red-600">
+              BERAPA HARGANYA?{" "}
+            </h2>
+            <div className="">
+              <Image
+                className="rounded-xl relative -mt-12 -mb-12"
+                src="/pricing.png"
+                alt="Pricing"
+                width={700}
+                height={700}
+              />
+            </div>
+            <p className="text-red-500 font-bold mt-0 p-0 text-xl">
+              🤔 Kira-kira worth it gak, cuma 98 ribu tapi dapat puluhan ribu
+              halaman worksheet anak?
+            </p>
+            <p className="text-red-500 font-bold mt-0 p-0 text-xl">
+              🤔 Worth it gak, 98 ribu aja, tapi Anda bisa jual kembali dan bisa
+              datangkan cuan berkali lipat?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* keuntungan */}
+      <h4>
+        <span className="block text-2xl font-bold text-center text-gray-800 md:text-4xl">
+          Keuntungan
+        </span>
+        <span className="block mt-1 text-center text-gray-600">
+          Keuntungan Jika Anda Investasi Produk Ini
+        </span>
+      </h4>
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-        <div className="md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32">
-          <div className="mt-5 sm:mt-10 lg:mt-0">
-            <div className="space-y-6 sm:space-y-8">
-              <div className="space-y-2 md:space-y-4">
-                <h2 className="font-bold text-3xl lg:text-3xl text-gray-800">
-                  BERAPA HARGANYA?{" "}
-                </h2>
-                <p className="text-gray-500">
-                  🤔 Kira-kira worth it gak, cuma 98 ribu tapi dapat puluhan
-                  ribu halaman worksheet anak?
-                </p>
-                <p className="text-gray-500">
-                  🤔 Worth it gak, 98 ribu aja, tapi Anda bisa jual kembali dan
-                  bisa datangkan cuan berkali lipat?
-                </p>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 items-center gap-6 md:gap-10">
+          <div className="size-full bg-white shadow-lg rounded-lg p-5">
+            <div className="flex items-center gap-x-4 mb-3">
+              <div className="inline-flex justify-center items-center size-[62px] rounded-full border-4 border-yellow-50 bg-yellow-100">
+                <svg
+                  className="flex-shrink-0 size-6 text-yellow-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path
+                    d="M3 21H21M3 18H21M5.82333 3.00037C6.2383 3.36683 6.5 3.90285 6.5 4.5C6.5 5.60457 5.60457 6.5 4.5 6.5C3.90285 6.5 3.36683 6.2383 3.00037 5.82333M5.82333 3.00037C5.94144 3 6.06676 3 6.2 3H17.8C17.9332 3 18.0586 3 18.1767 3.00037M5.82333 3.00037C4.94852 3.00308 4.46895 3.02593 4.09202 3.21799C3.71569 3.40973 3.40973 3.71569 3.21799 4.09202C3.02593 4.46895 3.00308 4.94852 3.00037 5.82333M3.00037 5.82333C3 5.94144 3 6.06676 3 6.2V11.8C3 11.9332 3 12.0586 3.00037 12.1767M3.00037 12.1767C3.36683 11.7617 3.90285 11.5 4.5 11.5C5.60457 11.5 6.5 12.3954 6.5 13.5C6.5 14.0971 6.2383 14.6332 5.82333 14.9996M3.00037 12.1767C3.00308 13.0515 3.02593 13.531 3.21799 13.908C3.40973 14.2843 3.71569 14.5903 4.09202 14.782C4.46895 14.9741 4.94852 14.9969 5.82333 14.9996M5.82333 14.9996C5.94144 15 6.06676 15 6.2 15H17.8C17.9332 15 18.0586 15 18.1767 14.9996M21 12.1771C20.6335 11.7619 20.0973 11.5 19.5 11.5C18.3954 11.5 17.5 12.3954 17.5 13.5C17.5 14.0971 17.7617 14.6332 18.1767 14.9996M21 12.1771C21.0004 12.0589 21 11.9334 21 11.8V6.2C21 6.06676 21 5.94144 20.9996 5.82333M21 12.1771C20.9973 13.0516 20.974 13.5311 20.782 13.908C20.5903 14.2843 20.2843 14.5903 19.908 14.782C19.5311 14.9741 19.0515 14.9969 18.1767 14.9996M20.9996 5.82333C20.6332 6.2383 20.0971 6.5 19.5 6.5C18.3954 6.5 17.5 5.60457 17.5 4.5C17.5 3.90285 17.7617 3.36683 18.1767 3.00037M20.9996 5.82333C20.9969 4.94852 20.9741 4.46895 20.782 4.09202C20.5903 3.71569 20.2843 3.40973 19.908 3.21799C19.5311 3.02593 19.0515 3.00308 18.1767 3.00037M14 9C14 10.1046 13.1046 11 12 11C10.8954 11 10 10.1046 10 9C10 7.89543 10.8954 7 12 7C13.1046 7 14 7.89543 14 9Z"
+                    // stroke="#000000"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+              <div className="w-full">
+                <h3 className="block text-lg font-semibold text-gray-800 text-wrap">
+                  Dapat Anda jual kembali 💰{" "}
+                </h3>
               </div>
             </div>
+            <p className="text-gray-600">
+              Dapatkan penghasilan tambahan dengan menjual kembali produk ini.
+            </p>
           </div>
-          <div>
-            <Image
-              className="rounded-xl"
-              src="/pricing.png"
-              alt="Pricing"
-              width={1000}
-              height={800}
-            />
+
+          <div className="size-full bg-white shadow-lg rounded-lg p-5">
+            <div className="flex items-center gap-x-4 mb-3">
+              <div className="inline-flex justify-center items-center size-[62px] rounded-full border-4 border-yellow-50 bg-yellow-100">
+                <svg
+                  fill="#eab308"
+                  height="24"
+                  width="24"
+                  viewBox="0 0 511.999 511.999"
+                >
+                  <g>
+                    <g>
+                      <path
+                        d="M428.517,54.219H301.838V23.921h86.66C361.822,8.872,331.096,0.203,298.393,0c-21.28,0.316-38.496,17.715-38.496,39.07
+			c0,21.551,17.532,39.084,39.084,39.084h22.43h127.466C442.765,69.611,435.95,61.604,428.517,54.219z"
+                      />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path
+                        d="M482.095,162.684h-60.779v-15.149v-15.149h54.296c-2.496-8.233-5.545-16.225-9.109-23.935H378.7
+			c7.623,11.138,12.093,24.598,12.093,39.084c0,14.486-4.469,27.945-12.093,39.084h67.363l24.521,15.61l13.008,8.28v-24.151h0
+			C483.591,178.34,483.082,170.438,482.095,162.684z"
+                      />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path
+                        d="M229.6,39.069c0-14.278,4.339-27.561,11.761-38.604c-28.169,1.997-54.624,10.282-77.974,23.455h35.69v30.298h-75.708
+			c-7.433,7.387-14.249,15.392-20.362,23.935h138.684C234.069,67.014,229.6,53.556,229.6,39.069z"
+                      />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path
+                        d="M241.69,433.846H103.007c6.112,8.543,12.928,16.549,20.361,23.935h75.708v30.298h-35.69
+			c23.35,13.173,49.806,21.459,77.974,23.455c-7.423-11.043-11.762-24.326-11.762-38.604
+			C229.599,458.444,234.068,444.985,241.69,433.846z"
+                      />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path
+                        d="M470.584,309.772l-24.521,15.61H378.7c7.624,11.138,12.093,24.597,12.093,39.083c0,14.486-4.47,27.945-12.093,39.084
+			h87.803c3.563-7.711,6.613-15.703,9.109-23.935h-54.296v-15.149v-15.149h60.779c0.988-7.754,1.497-15.657,1.497-23.675v-24.15
+			L470.584,309.772z"
+                      />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path
+                        d="M321.411,325.381H93.292H68.293v0.26c0,8.019,0.509,15.92,1.497,23.674h248.764v15.149v15.149H76.273
+			c2.495,8.233,5.545,16.225,9.108,23.935h213.6h22.43v0.001c21.551,0,39.084-17.533,39.084-39.084S342.962,325.381,321.411,325.381
+			z"
+                      />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path
+                        d="M428.516,457.781c7.434-7.387,14.25-15.392,20.362-23.935H321.411h-22.43c-21.551,0-39.084,17.533-39.084,39.084
+			c0,21.354,17.216,38.753,38.496,39.069c32.702-0.203,63.429-8.871,90.104-23.92h-86.66v-30.298H428.516z"
+                      />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path
+                        d="M321.411,108.45h-22.43H85.38c-3.563,7.711-6.613,15.703-9.108,23.935h242.282v15.149v15.149H69.79
+			c-0.988,7.754-1.497,15.657-1.497,23.675v0.261h24.999h228.12c21.551,0,39.084-17.532,39.084-39.084
+			S342.962,108.45,321.411,108.45z"
+                      />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <polygon
+                        points="53.145,216.916 37.996,216.916 13.366,216.916 13.366,295.084 37.996,295.084 53.145,295.084 62.994,295.084 
+			62.994,216.916 		"
+                      />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <polygon points="468.341,236.716 456.799,229.369 456.799,282.631 468.341,275.284 498.633,256 		" />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <polygon points="321.411,216.916 93.292,216.916 93.292,295.084 321.411,295.084 426.502,295.084 426.502,216.916 		" />
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <div className="w-full">
+                <h3 className="block text-lg font-semibold text-gray-800">
+                  Bisa Untuk Belajar Anak.
+                </h3>
+              </div>
+            </div>
+            <p className="text-gray-600">
+              Berikan kegiatan edukatif yang menyenangkan untuk anak Anda.
+            </p>
+          </div>
+
+          <div className="size-full bg-white shadow-lg rounded-lg p-5">
+            <div className="flex items-center gap-x-4 mb-3">
+              <div className="inline-flex justify-center items-center size-[62px] rounded-full border-4 border-yellow-50 bg-yellow-100">
+                <svg
+                  className="flex-shrink-0 size-6 text-yellow-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M12.5 6.00004C12.5 5.31322 12.2163 4.67366 11.7431 4.25578C11.2602 3.82926 10.5847 3.64296 9.87881 3.88387C9.12643 4.14065 8.27977 4.57906 7.61885 5.33233C7.12428 5.89599 6.74984 6.61798 6.58793 7.53045C5.74098 7.65664 5.00843 8.16524 4.47868 8.87157C3.86487 9.68999 3.5 10.7977 3.5 12C3.5 13.2023 3.86487 14.31 4.47868 15.1284C4.99276 15.8139 5.69782 16.3131 6.51308 16.4574C6.50452 16.494 6.5 16.5322 6.5 16.5715C6.5 17.7099 6.9821 18.5424 7.66175 19.1267C8.32466 19.6965 9.1633 20.0221 9.89841 20.212C11.366 20.5912 12.5 19.3418 12.5 18V6.00004ZM7.48691 16.4573C7.49547 16.494 7.5 16.5322 7.5 16.5715C7.5 17.3882 7.83089 17.9534 8.31361 18.3683C8.81308 18.7977 9.48618 19.0727 10.1486 19.2438C10.8199 19.4173 11.5 18.8674 11.5 18V6.00004C11.5 5.58229 11.3265 5.22198 11.0812 5.00533C10.8456 4.79731 10.5413 4.71442 10.2018 4.83027C9.55295 5.05172 8.87946 5.41182 8.37053 5.99186C7.87016 6.56214 7.5 7.37709 7.5 8.57147C7.5 8.84761 7.27614 9.07147 7 9.07147C6.72388 9.07147 6.50003 8.84764 6.5 8.57152C6.04804 8.70228 5.62513 9.00964 5.27868 9.47157C4.80671 10.1009 4.5 10.9932 4.5 12C4.5 13.0068 4.80671 13.8991 5.27868 14.5284C5.75054 15.1576 6.36424 15.5 7 15.5C7.59053 15.5 8.15996 15.2055 8.61676 14.6603C8.79412 14.4487 9.10948 14.4209 9.32114 14.5982C9.53279 14.7756 9.5606 15.091 9.38324 15.3026C8.88463 15.8976 8.23125 16.3255 7.48691 16.4573Z"
+                    fill="#47495F"
+                  />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M16.55 11.5H14.5C14.2239 11.5 14 11.7239 14 12C14 12.2761 14.2239 12.5 14.5 12.5H16.55C16.7816 13.6411 17.7905 14.5 19 14.5C20.3807 14.5 21.5 13.3807 21.5 12C21.5 10.6193 20.3807 9.5 19 9.5C17.7905 9.5 16.7816 10.3589 16.55 11.5ZM17.5 11.9963C17.502 11.1695 18.1728 10.5 19 10.5C19.8284 10.5 20.5 11.1716 20.5 12C20.5 12.8284 19.8284 13.5 19 13.5C18.1728 13.5 17.502 12.8305 17.5 12.0037L17.5 12L17.5 11.9963Z"
+                    fill="#47495F"
+                  />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M17.3385 16.132C17.7802 15.7388 18.3622 15.5 19 15.5C20.3807 15.5 21.5 16.6193 21.5 18C21.5 19.3807 20.3807 20.5 19 20.5C17.6193 20.5 16.5 19.3807 16.5 18C16.5 17.6162 16.5865 17.2527 16.741 16.9277C16.7227 16.9166 16.7049 16.9042 16.6877 16.8904L14.1877 14.8904C13.972 14.7179 13.9371 14.4033 14.1096 14.1877C14.2821 13.972 14.5967 13.9371 14.8124 14.1096L17.3124 16.1096C17.3214 16.1168 17.3301 16.1243 17.3385 16.132ZM19 16.5C18.1716 16.5 17.5 17.1716 17.5 18C17.5 18.8284 18.1716 19.5 19 19.5C19.8284 19.5 20.5 18.8284 20.5 18C20.5 17.1716 19.8284 16.5 19 16.5Z"
+                    fill="#47495F"
+                  />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M19 3.5C17.6193 3.5 16.5 4.61929 16.5 6C16.5 6.38376 16.5865 6.74733 16.741 7.07228C16.7227 7.08341 16.7049 7.09584 16.6877 7.10958L14.1877 9.10958C13.972 9.28209 13.9371 9.59674 14.1096 9.81237C14.2821 10.028 14.5967 10.063 14.8124 9.89045L17.3124 7.89045C17.3214 7.88323 17.3301 7.87575 17.3385 7.86804C17.7802 8.26116 18.3622 8.5 19 8.5C20.3807 8.5 21.5 7.38071 21.5 6C21.5 4.61929 20.3807 3.5 19 3.5ZM17.5 6C17.5 5.17157 18.1716 4.5 19 4.5C19.8284 4.5 20.5 5.17157 20.5 6C20.5 6.82843 19.8284 7.5 19 7.5C18.1716 7.5 17.5 6.82843 17.5 6Z"
+                    fill="#47495F"
+                  />
+                </svg>
+              </div>
+              <div className="w-full">
+                <h3 className="block text-lg font-semibold text-gray-800 text-wrap">
+                  Bisa Mengalihkan Focus Anak Dari HP/Gadget.
+                </h3>
+              </div>
+            </div>
+            <p className="text-gray-600">
+              Bantu anak Anda untuk lebih kreatif dan aktif dengan worksheet
+              ini.
+            </p>
+          </div>
+
+          <div className="size-full bg-white shadow-lg rounded-lg p-5">
+            <div className="flex items-center gap-x-4 mb-3">
+              <div className="inline-flex justify-center items-center size-[62px] rounded-full border-4 border-yellow-50 bg-yellow-100">
+                <svg
+                  className="flex-shrink-0 size-6 text-yellow-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5.5 8.5 9 12l-3.5 3.5L2 12l3.5-3.5Z" />
+                  <path d="m12 2 3.5 3.5L12 9 8.5 5.5 12 2Z" />
+                  <path d="M18.5 8.5 22 12l-3.5 3.5L15 12l3.5-3.5Z" />
+                  <path d="m12 15 3.5 3.5L12 22l-3.5-3.5L12 15Z" />
+                </svg>
+              </div>
+              <div className="w-full">
+                <h3 className="block text-lg font-semibold text-gray-800 text-wrap">
+                  Target market evergreen (tidak terbatas waktu) 👶
+                </h3>
+              </div>
+            </div>
+            <p className="text-gray-600">
+              Target market Anda tidak terbatas waktu, karena setiap tahun
+              selalu ada anak usia 2-5 tahun.
+            </p>
+          </div>
+
+          <div className="size-full bg-white shadow-lg rounded-lg p-5">
+            <div className="flex items-center gap-x-4 mb-3">
+              <div className="inline-flex justify-center items-center size-[62px] rounded-full border-4 border-yellow-50 bg-yellow-100">
+                <svg
+                  className="flex-shrink-0 size-6 text-yellow-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2" />
+                  <path d="m15.194 13.707 3.814 1.86-1.86 3.814" />
+                  <path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4" />
+                </svg>
+              </div>
+              <div className="w-full text-wrap">
+                <h3 className="block text-lg font-semibold text-gray-800">
+                  Investasi sekali, jual berkali-kali. Potensi penghasilan
+                  UNLIMITED. 🤑
+                </h3>
+              </div>
+            </div>
+            <p className="text-gray-600">
+              Investasi sekali, jual berkali-kali. Potensi penghasilan
+              UNLIMITED.
+            </p>
+          </div>
+
+          <div className="size-full bg-white shadow-lg rounded-lg p-5">
+            <div className="flex items-center gap-x-4 mb-3">
+              <div className="inline-flex justify-center items-center size-[62px] rounded-full border-4 border-yellow-50 bg-yellow-100">
+                <svg
+                  className="flex-shrink-0 size-6 text-yellow-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M8.3 10a.7.7 0 0 1-.626-1.079L11.4 3a.7.7 0 0 1 1.198-.043L16.3 8.9a.7.7 0 0 1-.572 1.1Z" />
+                  <rect x="3" y="14" width="7" height="7" rx="1" />
+                  <circle cx="17.5" cy="17.5" r="3.5" />
+                </svg>
+              </div>
+              <div className="w-full">
+                <h3 className="block text-lg font-semibold text-gray-800">
+                  Tersedia bonus menarik ⭐️
+                </h3>
+              </div>
+            </div>
+            <p className="text-gray-600">
+              Dapatkan bonus menarik dalam bundling ini.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* gallery */}
+      <div className="max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div className="grid sm:grid-cols-12 gap-6">
+          <div className="sm:self-end col-span-12 sm:col-span-7 md:col-span-8 lg:col-span-5 lg:col-start-3">
+            <a
+              className="group relative block rounded-xl overflow-hidden"
+              onClick={() => {
+                openZoomedImage("/1.jpeg");
+              }}
+            >
+              <div className="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
+                <Image
+                  className="group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover"
+                  src="/1.jpeg"
+                  alt="contoh produk 1"
+                  width={800}
+                  height={500}
+                />
+              </div>
+              {/* <div className="absolute bottom-0 start-0 end-0 p-2 sm:p-4">
+                <div className="text-sm font-bold text-gray-800 rounded-lg bg-white p-4 md:text-xl">
+                  Workplace personalities
+                </div>
+              </div> */}
+            </a>
+          </div>
+
+          <div className="sm:self-end col-span-12 sm:col-span-5 md:col-span-4 lg:col-span-3">
+            <a
+              className="group relative block rounded-xl overflow-hidden"
+              // href="#"
+              onClick={() => {
+                openZoomedImage("/3.jpeg");
+              }}
+            >
+              <div className="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
+                <Image
+                  className="group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover"
+                  src="/3.jpeg"
+                  alt="contoh produk 3"
+                  width={500}
+                  height={800}
+                />
+              </div>
+              {/* <div className="absolute bottom-0 start-0 end-0 p-2 sm:p-4">
+                <div className="text-sm font-bold text-gray-800 rounded-lg bg-white p-4 md:text-xl">
+                  Women in engineering
+                </div>
+              </div> */}
+            </a>
+          </div>
+
+          <div className="col-span-12 md:col-span-4">
+            <a
+              className="group relative block rounded-xl overflow-hidden"
+              // href="#"
+              onClick={() => {
+                openZoomedImage("/2.jpeg");
+              }}
+            >
+              <div className="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
+                <Image
+                  className="group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover"
+                  src="/2.jpeg"
+                  alt="contoh produk 2"
+                  width={800}
+                  height={400}
+                />
+              </div>
+            </a>
+          </div>
+
+          <div className="col-span-12 sm:col-span-6 md:col-span-4">
+            <a
+              className="group relative block rounded-xl overflow-hidden"
+              // href="#"
+              onClick={() => {
+                openZoomedImage("/4.jpeg");
+              }}
+            >
+              <div className="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
+                <Image
+                  className="group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover"
+                  src="/4.jpeg"
+                  alt="contoh produk 4"
+                  width={800}
+                  height={400}
+                />
+              </div>
+            </a>
+          </div>
+
+          <div className="col-span-12 sm:col-span-6 md:col-span-4">
+            <a
+              className="group relative block rounded-xl overflow-hidden"
+              // href="#"
+              onClick={() => {
+                openZoomedImage("/5.jpeg");
+              }}
+            >
+              <div className="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
+                <Image
+                  className="group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover"
+                  src="/5.jpeg"
+                  alt="contoh produk 5"
+                  width={800}
+                  height={400}
+                />
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -972,63 +1403,30 @@ Oiya saya print yang butuh² dulu dan jadiin 2 dalam selembar biar irit wkwkwk "
                 agar gak banyak saingan 😁😁
               </p>
               <h1 className="text-2xl text-gray-800 font-bold sm:text-5xl lg:text-6xl lg:leading-tight">
-                ⚠️PERHATIAN! ⚠️ <br />
+                ⚠️<span className="text-red-500">PERHATIAN!</span> ⚠️ <br />
                 TIDAK ADA BARANG FISIK YANG AKAN KAMI KIRIM KE ALAMAT ANDA{" "}
               </h1>
             </div>
 
             <div className="mx-auto">
+              <Image
+                alt="arrow-down"
+                src={"/arrow-down-2.gif"}
+                width={300}
+                height={300}
+              />
               <a
-                className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-green-600 text-white hover:bg-green-700 disabled:opacity-50 disabled:pointer-events-none"
-                href="https://wa.me/6285262625889?text=Assalamu'alaikum Bunda Ani, saya mau Jenius Printable Bundling 2024 harga Rp.98.000😊✨"
+                className=""
+                href="https://wa.me/6285262625889?text=Assalamu'alaikum Bunda Ani, saya mau Jenius Printable Bundling 2024 harga Rp.98.000"
                 target="_blank"
                 rel="noopener"
               >
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="-2.73 0 1225.016 1225.016"
-                  // xmlns="http://www.w3.org/2000/svg"
-                  // xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <path
-                    fill="#E0E0E0"
-                    d="M1041.858 178.02C927.206 63.289 774.753.07 612.325 0 277.617 0 5.232 272.298 5.098 606.991c-.039 106.986 27.915 211.42 81.048 303.476L0 1225.016l321.898-84.406c88.689 48.368 188.547 73.855 290.166 73.896h.258.003c334.654 0 607.08-272.346 607.222-607.023.056-162.208-63.052-314.724-177.689-429.463zm-429.533 933.963h-.197c-90.578-.048-179.402-24.366-256.878-70.339l-18.438-10.93-191.021 50.083 51-186.176-12.013-19.087c-50.525-80.336-77.198-173.175-77.16-268.504.111-278.186 226.507-504.503 504.898-504.503 134.812.056 261.519 52.604 356.814 147.965 95.289 95.36 147.728 222.128 147.688 356.948-.118 278.195-226.522 504.543-504.693 504.543z"
-                  />
-                  <linearGradient
-                    id="a"
-                    gradientUnits="userSpaceOnUse"
-                    x1="609.77"
-                    y1="1190.114"
-                    x2="609.77"
-                    y2="21.084"
-                  >
-                    <stop offset="0" stopColor="#20b038" />
-                    <stop offset="1" stopColor="#60d66a" />
-                  </linearGradient>
-                  <path
-                    fill="url(#a)"
-                    d="M27.875 1190.114l82.211-300.18c-50.719-87.852-77.391-187.523-77.359-289.602.133-319.398 260.078-579.25 579.469-579.25 155.016.07 300.508 60.398 409.898 169.891 109.414 109.492 169.633 255.031 169.57 409.812-.133 319.406-260.094 579.281-579.445 579.281-.023 0 .016 0 0 0h-.258c-96.977-.031-192.266-24.375-276.898-70.5l-307.188 80.548z"
-                  />
-                  <image
-                    overflow="visible"
-                    opacity=".08"
-                    width="682"
-                    height="639"
-                    transform="translate(270.984 291.372)"
-                  />
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    fill="#FFF"
-                    d="M462.273 349.294c-11.234-24.977-23.062-25.477-33.75-25.914-8.742-.375-18.75-.352-28.742-.352-10 0-26.25 3.758-39.992 18.766-13.75 15.008-52.5 51.289-52.5 125.078 0 73.797 53.75 145.102 61.242 155.117 7.5 10 103.758 166.266 256.203 226.383 126.695 49.961 152.477 40.023 179.977 37.523s88.734-36.273 101.234-71.297c12.5-35.016 12.5-65.031 8.75-71.305-3.75-6.25-13.75-10-28.75-17.5s-88.734-43.789-102.484-48.789-23.75-7.5-33.75 7.516c-10 15-38.727 48.773-47.477 58.773-8.75 10.023-17.5 11.273-32.5 3.773-15-7.523-63.305-23.344-120.609-74.438-44.586-39.75-74.688-88.844-83.438-103.859-8.75-15-.938-23.125 6.586-30.602 6.734-6.719 15-17.508 22.5-26.266 7.484-8.758 9.984-15.008 14.984-25.008 5-10.016 2.5-18.773-1.25-26.273s-32.898-81.67-46.234-111.326z"
-                  />
-                  <path
-                    fill="#FFF"
-                    d="M1036.898 176.091C923.562 62.677 772.859.185 612.297.114 281.43.114 12.172 269.286 12.039 600.137 12 705.896 39.633 809.13 92.156 900.13L7 1211.067l318.203-83.438c87.672 47.812 186.383 73.008 286.836 73.047h.255.003c330.812 0 600.109-269.219 600.25-600.055.055-160.343-62.328-311.108-175.649-424.53zm-424.601 923.242h-.195c-89.539-.047-177.344-24.086-253.93-69.531l-18.227-10.805-188.828 49.508 50.414-184.039-11.875-18.867c-49.945-79.414-76.312-171.188-76.273-265.422.109-274.992 223.906-498.711 499.102-498.711 133.266.055 258.516 52 352.719 146.266 94.195 94.266 146.031 219.578 145.992 352.852-.118 274.999-223.923 498.749-498.899 498.749z"
-                  />
-                </svg>
-                ORDER NOW!
+                <Image
+                  alt="pesan sekarang"
+                  src={"/gambar-gif-pesan-sekarang.gif"}
+                  width={300}
+                  height={100}
+                />
               </a>
             </div>
 
@@ -1113,7 +1511,16 @@ Oiya saya print yang butuh² dulu dan jadiin 2 dalam selembar biar irit wkwkwk "
         </div>
       </div>
 
-      {/* hero */}
+      {zoomedImage && (
+        <div className="zoomed-image-container" onClick={closeZoomedImage}>
+          <Image
+            src={zoomedImage}
+            alt="zoomed-image"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
+      )}
 
       {/* footer */}
       <footer className="mt-auto w-full py-10 px-4 sm:px-6 lg:px-8 mx-auto border-t-2 border-solid border-gray-100">
@@ -1132,7 +1539,7 @@ Oiya saya print yang butuh² dulu dan jadiin 2 dalam selembar biar irit wkwkwk "
             {/* <p className="text-gray-500">
               We're part of the{" "}
               <a
-                className="font-semibold text-blue-600 hover:text-blue-700"
+                className="font-semibold text-yellow-500 hover:text-blue-700"
                 href="#"
               >
                 Htmlstream
