@@ -65,6 +65,14 @@ export default function Home() {
           key="og:url"
         />
         <link rel="icon" href="/icon.jpeg" sizes="any" />
+        <link rel="icon" href="/icon.jpeg" type="image/jpeg" />
+
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="AniPrintable" />
+        <meta name="keywords" content="worksheet, printable, anak, bundling" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       {/* announcement */}
       {/* <a
