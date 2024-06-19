@@ -61,7 +61,7 @@ export default function Home() {
         />
         <meta
           property="og:url"
-          content="https://jeniusprintable.com"
+          content="https://aniprintable.vercel.app"
           key="og:url"
         />
         <link rel="icon" href="/icon.jpeg" sizes="any" />
