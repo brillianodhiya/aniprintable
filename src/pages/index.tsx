@@ -88,7 +88,7 @@ export default function Home() {
       {/* announcement */}
       {/* <a
         className="group block bg-gray-100 hover:bg-gray-200 p-4 rounded-lg text-center transition-all duration-300"
-        href="https://wa.me/6285262625889?text=Assalamu'alaikum Bunda Ani, saya mau Jenius Printable Bundling 2024 harga Rp.98.000"
+       href="https://wa.me/6285262625889?text=Assalamu'alaikum Bunda Ani. Saya mau _Jenius Printable Bundling 2024_ harga *Rp.98.000*"
         target="_blank"
         rel="noopener"
       >
@@ -134,7 +134,7 @@ export default function Home() {
             <div className="mt-7 grid gap-3 w-full sm:inline-flex">
               <a
                 className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-green-600 text-white hover:bg-green-700 disabled:opacity-50 disabled:pointer-events-none"
-                href="https://wa.me/6285262625889?text=Assalamu'alaikum Bunda Ani, saya mau Jenius Printable Bundling 2024 harga Rp.98.000"
+                href="https://wa.me/6285262625889?text=Assalamu'alaikum Bunda Ani. Saya mau _Jenius Printable Bundling 2024_ harga *Rp.98.000*"
                 target="_blank"
                 rel="noopener"
               >
@@ -533,7 +533,7 @@ export default function Home() {
             <div className="mx-auto">
               <a
                 className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-green-600 text-white hover:bg-green-700 disabled:opacity-50 disabled:pointer-events-none"
-                href="https://wa.me/6285262625889?text=Assalamu'alaikum Bunda Ani, saya mau Jenius Printable Bundling 2024 harga Rp.98.000"
+                href="https://wa.me/6285262625889?text=Assalamu'alaikum Bunda Ani. Saya mau _Jenius Printable Bundling 2024_ harga *Rp.98.000*"
                 target="_blank"
                 rel="noopener"
               >
@@ -1417,7 +1417,7 @@ Oiya saya print yang butuh² dulu dan jadiin 2 dalam selembar biar irit wkwkwk "
               />
               <a
                 className=""
-                href="https://wa.me/6285262625889?text=Assalamu'alaikum Bunda Ani, saya mau Jenius Printable Bundling 2024 harga Rp.98.000"
+                href="https://wa.me/6285262625889?text=Assalamu'alaikum Bunda Ani. Saya mau _Jenius Printable Bundling 2024_ harga *Rp.98.000*"
                 target="_blank"
                 rel="noopener"
               >
