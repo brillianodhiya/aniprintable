@@ -56,7 +56,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="/content-banner.jpeg"
+          content="https://aniprintable.vercel.app/icon.jpeg"
           key="og:image"
         />
         <meta
