@@ -64,7 +64,7 @@ export default function Home() {
           content="https://aniprintable.vercel.app"
           key="og:url"
         />
-        <link rel="icon" href="/icon.jpeg" sizes="any" />
+        <link rel="icon" href="/icon.png" sizes="any" />
 
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#ffffff" />
@@ -911,6 +911,29 @@ Oiya saya print yang butuh² dulu dan jadiin 2 dalam selembar biar irit wkwkwk "
                   anak! 🥰
                 </p>
               </div>
+              {/* <div className="space-y-2 md:space-y-4">
+                <h2 className="font-bold text-3xl lg:text-3xl text-gray-800">
+                  BERAPA HARGANYA?{" "}
+                </h2>
+                <p className="text-gray-500">
+                  🤔 Kira-kira worth it gak, cuma 98 ribu tapi dapat puluhan
+                  ribu halaman worksheet anak?
+                </p>
+                <p className="text-gray-500">
+                  🤔 Worth it gak, 98 ribu aja, tapi Anda bisa jual kembali dan
+                  bisa datangkan cuan berkali lipat?
+                </p>
+              </div> */}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* hero 3 */}
+      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div className="md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32">
+          <div className="mt-5 sm:mt-10 lg:mt-0">
+            <div className="space-y-6 sm:space-y-8">
               <div className="space-y-2 md:space-y-4">
                 <h2 className="font-bold text-3xl lg:text-3xl text-gray-800">
                   BERAPA HARGANYA?{" "}
@@ -926,10 +949,19 @@ Oiya saya print yang butuh² dulu dan jadiin 2 dalam selembar biar irit wkwkwk "
               </div>
             </div>
           </div>
+          <div>
+            <Image
+              className="rounded-xl"
+              src="/pricing.png"
+              alt="Pricing"
+              width={1000}
+              height={800}
+            />
+          </div>
         </div>
       </div>
 
-      {/* hero */}
+      {/* hero 4 */}
       <div className="overflow-hidden">
         <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="relative mx-auto max-w-4xl grid space-y-5 sm:space-y-10">
@@ -1084,7 +1116,7 @@ Oiya saya print yang butuh² dulu dan jadiin 2 dalam selembar biar irit wkwkwk "
       {/* hero */}
 
       {/* footer */}
-      <footer className="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+      <footer className="mt-auto w-full py-10 px-4 sm:px-6 lg:px-8 mx-auto border-t-2 border-solid border-gray-100">
         <div className="text-center">
           <div>
             <a
