@@ -20,7 +20,7 @@ const Shortlink: NextPage = () => {
         // For example, interacting with Google Drive API
         // ...
         const shortlink =
-          "https://drive.google.com/drive/folders/1yYA5cM9yOq2uclaQl0jfUblMpSRa7D_w?usp=sharing";
+          "https://drive.google.com/drive/folders/1LZXc_Uz6dApkvehf0cNIYJkiKPoI95vq?usp=sharing";
         router.push(shortlink); // Redirect to the shortlink
       } catch (error) {
         console.error("Error creating shortlink:", error);
