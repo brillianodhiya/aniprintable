@@ -68,7 +68,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://aniprintable.vercel.app/icon.jpeg"
+          content="https://aniprintable.vercel.app/icon.jpg"
           key="og:image"
         />
         <meta
@@ -76,7 +76,7 @@ export default function Home() {
           content="https://aniprintable.vercel.app"
           key="og:url"
         />
-        <link rel="icon" href="/icon.png" sizes="any" />
+        <link rel="icon" href="/icon.jpg" sizes="any" />
 
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#ffffff" />
